@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineMatch – Seu Guia Personalizado de Filmes</title>
+  <!-- Link para ícones do Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* Reset e configuração básica */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+      padding: 20px;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+    header h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+    header h1 span {
+      display: block;
+      font-size: 1.2rem;
+      margin-top: 5px;
+      color: #ccc;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #f39c12;
+    }
+    #hero {
+      background: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: #fff;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    #hero .container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 10px;
+    }
+    #hero h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    #hero p {
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 40px 0;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #333;
+    }
+    /* Seção de Features */
+    #features {
+      background: #fff;
+    }
+    .feature {
+      text-align: center;
+      padding: 20px;
+      flex: 1;
+    }
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    .feature i {
+      font-size: 3rem;
+      color: #f39c12;
+      margin-bottom: 10px;
+    }
+    .feature h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .feature p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    /* Seção de IA (chat) */
+    #ai {
+      background: #f9f9f9;
+    }
+    #chatbox {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    #chatlogs {
+      height: 200px;
+      overflow-y: auto;
+      border: 1px solid #eee;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      background: #fafafa;
+    }
+    #chatlogs div {
+      margin-bottom: 10px;
+    }
+    #chat-form {
+      display: flex;
+    }
+    #chat-input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px 0 0 5px;
+    }
+    #chat-form button {
+      padding: 10px 20px;
+      border: none;
+      background: #f39c12;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 0 5px 5px 0;
+      transition: background 0.3s ease;
+    }
+    #chat-form button:hover {
+      background: #e67e22;
+    }
+    /* Seção de Monetização */
+    #monetizacao {
+      background: #fff;
+      text-align: center;
+    }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+    }
+    @media(max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+      .features-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho e Navegação -->
+  <header>
+    <div class="container">
+      <h1>CineMatch <span>Seu Guia Personalizado de Filmes</span></h1>
+      <nav>
+        <ul>
+          <li><a href="#features">Recursos</a></li>
+          <li><a href="#ai">Assistente AI</a></li>
+          <li><a href="#monetizacao">Monetização</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seção Hero -->
+  <section id="hero">
+    <div class="container">
+      <h2>Encontre o Filme Perfeito para Qualquer Momento!</h2>
+      <p>Descubra filmes e séries com recomendações personalizadas baseadas nos seus gostos e no tempo disponível.</p>
+    </div>
+  </section>
+
+  <!-- Seção de Recursos/Features -->
+  <section id="features">
+    <div class="container">
+      <h2>Principais Recursos</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <i class="fas fa-brain"></i>
+          <h3>Recomendações Inteligentes</h3>
+          <p>Um algoritmo analisa suas preferências e sugere filmes e séries que combinam com seu gosto.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-clock"></i>
+          <h3>Modo "O Que Assistir?"</h3>
+          <p>Informe o tempo disponível (ex: 1h30) e o app sugere opções na duração ideal.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-users"></i>
+          <h3>Combinação de Gustos</h3>
+          <p>Crie uma experiência coletiva: o app cruza gostos de diferentes pessoas para agradar a todos.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-heart"></i>
+          <h3>Busca por Emoção</h3>
+          <p>Escolha o sentimento desejado (emoção, suspense, risadas) e receba recomendações na vibe certa.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Calendário de Estreias</h3>
+          <p>Fique por dentro dos lançamentos no cinema e nas plataformas de streaming.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-random"></i>
+          <h3>Modo "Surpresa"</h3>
+          <p>Para os aventureiros: receba uma indicação aleatória baseada nos seus gostos.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-list"></i>
+          <h3>Lista de Assistidos & Wishlist</h3>
+          <p>Salve filmes já vistos e organize suas futuras sessões com listas personalizadas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Assistente AI -->
+  <section id="ai">
+    <div class="container">
+      <h2>Assistente AI</h2>
+      <p>Converse com nossa assistente inteligente para obter recomendações em tempo real!</p>
+      <div id="chatbox">
+        <div id="chatlogs"></div>
+        <form id="chat-form">
+          <input type="text" id="chat-input" placeholder="Pergunte algo sobre filmes..." required>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Monetização -->
+  <section id="monetizacao">
+    <div class="container">
+      <h2>Monetização</h2>
+      <p>Plano grátis com anúncios + versão premium sem anúncios e com recomendações avançadas.</p>
+      <p>Parcerias com serviços de streaming e venda de ingressos.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 CineMatch. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script simples para simulação de chat com IA -->
+  <script>
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const chatLogs = document.getElementById('chatlogs');
+
+    chatForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const userMessage = chatInput.value;
+      appendMessage('Você: ' + userMessage);
+      
+      // Simulação de resposta da IA
+      setTimeout(() => {
+        appendMessage('IA: Que tal assistir "A Origem" hoje? Uma ótima opção para fãs de suspense e ação.');
+      }, 1000);
+      
+      chatInput.value = '';
+    });
+
+    function appendMessage(message) {
+      const messageDiv = document.createElement('div');
+      messageDiv.textContent = message;
+      chatLogs.appendChild(messageDiv);
+      chatLogs.scrollTop = chatLogs.scrollHeight;
+    }
+  </script>
+</body>
+</html>
